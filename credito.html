@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Captura</title>
+    <link rel="stylesheet" href="equipo.css">
+    
+</head>
+<body>
+    <div class="container">
+   <center> <div id="caja2" class="form-container">
+        <h2>Panorama Tower</h2>
+        <form name="fdatos" onsubmit="return Calcular()">
+            <h2>Formulario al Crédito</h2>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name1" name="name" required>
+            <br>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="ap" name="apellido" required>
+            <br>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="edad1" name="age" required min="0">
+           <br>
+            <label>N° de Teléfono:</label> 
+            <input type="tel" id="tel1" placeholder="número sin espacios" required>
+            <br>
+            <label for="salario">Salario (Mayor a 3500):</label>
+            <input type="number" id="salario" name="salario" required min="3500">
+            
+            <label for="departamento">Modelo Departamento:</label> 
+            <select name="Departamento" id="dep" required>
+                <option value="1">Vistana ($150.000)</option>
+                <option value="2">Loft ($125.000)</option>
+                <option value="3">Mirador ($100.000)</option>
+            </select>
+            <br>
+            <label for="Porcentaje">Porcentaje de Prima:</label>
+            <input type="radio" name="p" value="10%" required> 10%
+            <input type="radio" name="p" value="15%"> 15%
+            <input type="radio" name="p" value="20%"> 20%
+            <br>
+            <label for="plazo">Plazo (1-30 años):</label>
+            <input type="number" id="plazo" name="plazo" min="1" max="30" required>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div></center>
+
+    <div id="resultado">
+    <script src="credito.js"></script>
+</div>
+</body>
+</html>
+
+

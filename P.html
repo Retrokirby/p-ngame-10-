@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Apartamento al Contado</title>
+    <link rel="stylesheet" href="equipo.css">
+    <link rel="stylesheet" href="estiloQP.css">
+</head>
+<body>
+    <div class="container">
+    <center><div id="caja1" class="form-container">
+        <h2>Compra de Apartamento al Contado</h2>
+        <form name="Datos" onsubmit="return Calcular()" class="form">
+            
+            <label for="name">Nombre:</label>
+            <input type="text" id="name1" name="name" class="input" required>
+
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" name="apellido" class="input" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad1" name="edad" class="input" required min="0">
+
+            <label for="telefono">Tel:</label>
+            <input type="number" id="telefono" name="telefono" class="input" required>
+            
+            <label for="salario">salario:</label>
+            <input type="number" id="salario" name="salario" class="input" required>
+
+            <label>Tipo de Apartamento:</label>
+            <select name="apartamento" id="apartamento" class="input" required>
+                <option value="0">Seleccione...</option>
+                <option value="150,000">Vistana - $150,000</option>
+                <option value="125,000">Loft - $125,000</option>
+                <option value="100,000">Mirador - $100,000</option>
+            </select>
+
+          
+            <button type="submit" class="form-submit-btn"><span>Enviar</span></button>
+        </form>
+    </div></center>
+
+    <div id="resultado" class="form-container" style="display: none;"></div>
+    <script src="P.js"></script>
+    </div>
+</body>
+</html>
