@@ -1,25 +1,30 @@
 function Calcular() {
-    let nombre = document.getElementById("name1").value;
-    let apellido = document.getElementById("Apellido").value;
-    let edad = document.getElementById("edad1").value;
-    let telefono = document.getElementById("telefono").value;
-    let salario = document.getElementById("salario").value;
-    let apartamentoSelect = document.getElementById("apartamento");
-    let apartamento = apartamentoSelect.options[apartamentoSelect.selectedIndex].text;
-    let costoInicial = parseFloat(apartamentoSelect.value);
 
-   
-    let descuento = 0;
-    if (costoInicial === 150000) {
-        descuento = 0.25; 
-    } else if (costoInicial === 125000) {
-        descuento = 0.15; 
-    } else if (costoInicial === 100000) {
-        descuento = 0.10; 
-    }
+    let nombre = document.getElementById('name1').value;
+    let Apellido = document.getElementById('Apellido').value;
+    let Edad = document.getElementById('edad1').value;
+    let Telefono = document.getElementById('telefono').value;
+    let Salario = document.getElementById('salario').value;
+    let tipodeApartamento = document.getElementById('apartamento').value;
     
-    let montoDescuento = costoInicial * descuento;
-    let pagoFinal = costoInicial - montoDescuento;
+    let preciosAPARTAMENTOS = {
+        Vistana: 150000,
+        Loft: 125000,
+        Mirador: 100000
+    };
+
+    let Descuento = {
+        Vistana: 0.25,
+        Loft: 0.15,
+        Mirador: 0.10
+    };
+
+    let PrecioInicial = preciosAPARTAMENTOS[tipodeApartamento];
+    let descuento = PrecioInicial * Descuento[tipodeApartamento];
+    let costoFinal = PrecioInicial - descuento;
+
+
+Descuento;
 
 
     document.querySelector(".form-container").style.display = "none";
